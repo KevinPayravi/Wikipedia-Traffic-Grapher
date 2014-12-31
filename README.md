@@ -1,6 +1,6 @@
 Wikipedia Traffic Grapher
 =========================
-The Wikipedia Traffic Grapher is a web tool that graphs monthly traffic of up to five articles on the English Wikipedia.
+The Wikipedia Traffic Grapher is a web tool that graphs the monthly traffic of up to five articles on the English Wikipedia.
 
 Live site hosted at the [Wikimedia Tool Labs](https://tools.wmflabs.org/traffic-grapher/).
 
