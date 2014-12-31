@@ -1,5 +1,4 @@
-<!--
-/*!
+<?php /*
  * Wikipedia Traffic Grapher
  * 
  * Version: 1.0
@@ -7,8 +6,7 @@
  * Copyright 2014 Kevin Payravi (SuperHamster @ en.wiki)
  * Released under the GNU General Public License
  * https://github.com/KevinPayravi/Wikipedia-Traffic-Grapher/blob/master/LICENSE
- */
--->
+*/ ?>
 
 <!DOCTYPE html>
 <html lang="en">
