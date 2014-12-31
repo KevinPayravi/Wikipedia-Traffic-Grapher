@@ -1,5 +1,4 @@
-<!--
-/*!
+<?php /*
  * Wikipedia Traffic Grapher
  * 
  * Version: 1.0
@@ -8,7 +7,7 @@
  * Released under the GNU General Public License
  * https://github.com/KevinPayravi/Wikipedia-Traffic-Grapher/blob/master/LICENSE
  */
--->
+*/ ?>
 
 <?php
 	$urlBase = 'http://stats.grok.se/json/en/';
