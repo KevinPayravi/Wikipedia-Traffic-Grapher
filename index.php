@@ -1,6 +1,6 @@
 <!--
 /*!
- * Wikipedia Multi-Page Traffic Grapher
+ * Wikipedia Traffic Grapher
  * 
  * Version: 1.0
  *
