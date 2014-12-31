@@ -12,8 +12,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+	<title>Wikipedia Traffic Grapher</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A tool for graphic monthly traffic of articles on the English Wikipedia.">
+	<meta name="keywords" content="wikipedia, traffic, grapher, graphs, charts">
 	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
