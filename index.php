@@ -1,3 +1,4 @@
+<!--
 /*!
  * Wikipedia Multi-Page Traffic Grapher
  * 
@@ -7,6 +8,7 @@
  * Released under the GNU General Public License
  * https://github.com/KevinPayravi/Wikipedia-Traffic-Grapher/blob/master/LICENSE
  */
+-->
 
 <!DOCTYPE html>
 <html lang="en">
