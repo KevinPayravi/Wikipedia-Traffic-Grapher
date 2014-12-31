@@ -1,6 +1,8 @@
-Wikipedia-Traffic-Grapher
+Wikipedia Traffic Grapher
 =========================
-The Wikipedia Multi-Page Traffic Grapher is a web tool that graphs monthly traffic statics of up to five articles on the English Wikipedia.
+The Wikipedia Traffic Grapher is a web tool that graphs monthly traffic statics of up to five articles on the English Wikipedia.
+
+Created as a volunteer project; not officially affiliated with Wikipedia or the Wikimedia Foundation.
 
 Components and Authorship
 =========================
