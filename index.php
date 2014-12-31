@@ -665,7 +665,7 @@ function extractViews(articleJSONs) {
 }
 </script>
 
-<script src="/js/Chart.js"></script>
+<script src="js/Chart.js"></script>
 
 </body>
 </html>
