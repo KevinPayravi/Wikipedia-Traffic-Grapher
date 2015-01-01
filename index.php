@@ -669,15 +669,6 @@ function extractViews(articleJSONs) {
 
 <script src="js/Chart.js"></script>
 
-<script>
-	//////// PAGEVIEW COUNTER IN localStorage ////////
-	if (localStorage.viewCount) {
-		localStorage.viewCount = Number(localStorage.viewCount) +1;
-	} else {
-		localStorage.viewCount = 1;
- 	}
-</script>
-
 </body>
 </html>
 
