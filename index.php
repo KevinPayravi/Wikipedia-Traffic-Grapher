@@ -138,7 +138,7 @@
 			<h6>
 				Made with <3 by <a href="http://www.kevinpayravi.com/">Kevin Payravi</a>
 				<br>
-				(<a href="http://en.wikipedia.org/wiki/User:SuperHamster/">SuperHamster</a> at en.wiki)
+				(<a href="http://en.wikipedia.org/wiki/User:SuperHamster">SuperHamster</a> at en.wiki)
 				<br><br>
 				Data from <a href="http://stats.grok.se/">stats.grok.se</a>
 				<br>
