@@ -16,3 +16,19 @@ body.loading {
 body.loading .loader {
     display: block;
 }
+
+a.key:link {
+    color: #FFFFFF;
+}
+
+a.key:visited {
+    color: #FFFFFF;
+}
+
+a.key:hover {
+    color: #F5F5F5;
+}
+
+a.key:active {
+    color: #FFFFFF;
+}
