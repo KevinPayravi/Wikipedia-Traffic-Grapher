@@ -260,6 +260,8 @@ function main() {
 		for (var i = 0; i < articles.length; i++) {
 			articles[i] = articles[i].replace("%26", "&");
 			articles[i] = articles[i].replace("%2B", "+");
+			articles[i] = articles[i].replace("\"", "&quot;");
+			articles[i] = articles[i].replace("_", "&nbsp;");
 		}
 		
 		if (articles.length == 1) {
@@ -269,7 +271,9 @@ function main() {
 				dates.push(key);
 				pageViews.push(obj1[key]);
 			}
-			$('#keyOne').append(articles[0]);
+
+			$('#keyOne').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[0] + "\">" + articles[0] + "</a>");
+
 		} else if (articles.length == 2) {
 			var pageViews = [];
 			var pageViews2 = [];
@@ -282,8 +286,10 @@ function main() {
 			for (var key in obj2) {
 				pageViews2.push(obj2[key]);
 			}
-			$('#keyOne').append(articles[0]);
-			$('#keyTwo').append(articles[1]);
+
+			$('#keyOne').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[0] + "\">" + articles[0] + "</a>");
+			$('#keyTwo').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[1] + "\">" + articles[1] + "</a>");
+
 		} else if (articles.length == 3) {
 			var pageViews = [];
 			var pageViews2 = [];
@@ -301,9 +307,11 @@ function main() {
 			for (var key in obj3) {
 				pageViews3.push(obj3[key]);
 			}
-			$('#keyOne').append(articles[0]);
-			$('#keyTwo').append(articles[1]);
-			$('#keyThree').append(articles[2]);
+
+			$('#keyOne').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[0] + "\">" + articles[0] + "</a>");
+			$('#keyTwo').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[1] + "\">" + articles[1] + "</a>");
+			$('#keyThree').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[2] + "\">" + articles[2] + "</a>");
+
 		} else if (articles.length == 4) {
 			var pageViews = [];
 			var pageViews2 = [];
@@ -326,10 +334,12 @@ function main() {
 			for (var key in obj4) {
 				pageViews4.push(obj4[key]);
 			}
-			$('#keyOne').append(articles[0]);
-			$('#keyTwo').append(articles[1]);
-			$('#keyThree').append(articles[2]);
-			$('#keyFour').append(articles[3]);
+			
+			$('#keyOne').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[0] + "\">" + articles[0] + "</a>");
+			$('#keyTwo').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[1] + "\">" + articles[1] + "</a>");
+			$('#keyThree').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[2] + "\">" + articles[2] + "</a>");
+			$('#keyFour').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[3] + "\">" + articles[3] + "</a>");
+
 		} else if (articles.length == 5) {
 			var pageViews = [];
 			var pageViews2 = [];
@@ -357,13 +367,14 @@ function main() {
 			for (var key in obj5) {
 				pageViews5.push(obj5[key]);
 			}
-			$('#keyOne').append(articles[0]);
-			$('#keyTwo').append(articles[1]);
-			$('#keyThree').append(articles[2]);
-			$('#keyFour').append(articles[3]);
-			$('#keyFive').append(articles[4]);
+
+			$('#keyOne').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[0] + "\">" + articles[0] + "</a>");
+			$('#keyTwo').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[1] + "\">" + articles[1] + "</a>");
+			$('#keyThree').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[2] + "\">" + articles[2] + "</a>");
+			$('#keyFour').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[3] + "\">" + articles[3] + "</a>");
+			$('#keyFive').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[4] + "\">" + articles[4] + "</a>");
 		}
-		
+
 		//////// GENERATE GRAPH DATASETS ////////
 		if (articles.length == 1) {
 			var dataLine = {
