@@ -630,7 +630,7 @@ function main() {
 		}
 
 	} else {
-		// If at least one articl has not been entered, alert user:
+		// If at least one article has not been entered, alert user:
 		alert("Please enter at least one article to analyze.");
 		$('#chartContainer').empty();
 	}
