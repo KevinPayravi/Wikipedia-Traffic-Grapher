@@ -174,19 +174,25 @@
 
 <script>
 function loadStart() {
-	// Clear graphs and key:
+	// Clearc charts:
+	if (typeof lineChart !== 'undefined') {
+		lineChart.destroy();
+    	}
+	if (typeof barChart !== 'undefined') {
+		barChart.destroy();
+    	}
+
+	// Clear key:
 	document.getElementById("keyTitle").style.display="none";
 	$('#keyOne').empty();
 	$('#keyTwo').empty();
 	$('#keyThree').empty();
 	$('#keyFour').empty();
 	$('#keyFive').empty();
-	$('#chartContainer').empty();
 
 	// Check if graph type has been selected; if not, activate loading overlay and call main method:
 	if (!document.getElementById("showLineGraph").checked && !document.getElementById("showBarGraph").checked) {
 		alert("Please select the type(s) of graph you want!");
-		$('#DivChartContainer').empty();
 	} else {
 		document.getElementById("loader").style.display="inline";
 		setTimeout(main, 0);
@@ -206,17 +212,21 @@ function main() {
 		if(articleTitle != ""){
 			// Trim spaces:
 			articleTitle = articleTitle.trim();
+
 			// If string is only empty spaces, get rid of them:
 			articleTitle = articleTitle.concat("#$%");
 			articleTitle = articleTitle.trim();
 			articleTitle = articleTitle.replace("#$%", "");
+
 			// Replace remaining spaces with underscores:
 			articleTitle = articleTitle.replace(/ /g, "_");
+
 			// Replace evil code-breaking characters will unicode or empty characters:
 			articleTitle = articleTitle.replace("\%", "");
 			articleTitle = articleTitle.replace("\#", "");
 			articleTitle = articleTitle.replace("\&", "\%26");
 			articleTitle = articleTitle.replace("\+", "\%2B");
+
 			// Push article title to articles array:
 			if(articleTitle != ""){
 				articles.push(articleTitle);
@@ -275,7 +285,6 @@ function main() {
 			}
 
 			$('#keyOne').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[0] + "\">" + articles[0] + "</a>");
-
 		} else if (articles.length == 2) {
 			var pageViews = [];
 			var pageViews2 = [];
@@ -291,7 +300,6 @@ function main() {
 
 			$('#keyOne').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[0] + "\">" + articles[0] + "</a>");
 			$('#keyTwo').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[1] + "\">" + articles[1] + "</a>");
-
 		} else if (articles.length == 3) {
 			var pageViews = [];
 			var pageViews2 = [];
@@ -313,7 +321,6 @@ function main() {
 			$('#keyOne').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[0] + "\">" + articles[0] + "</a>");
 			$('#keyTwo').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[1] + "\">" + articles[1] + "</a>");
 			$('#keyThree').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[2] + "\">" + articles[2] + "</a>");
-
 		} else if (articles.length == 4) {
 			var pageViews = [];
 			var pageViews2 = [];
@@ -341,7 +348,6 @@ function main() {
 			$('#keyTwo').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[1] + "\">" + articles[1] + "</a>");
 			$('#keyThree').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[2] + "\">" + articles[2] + "</a>");
 			$('#keyFour').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[3] + "\">" + articles[3] + "</a>");
-
 		} else if (articles.length == 5) {
 			var pageViews = [];
 			var pageViews2 = [];
@@ -616,23 +622,26 @@ function main() {
 		}
 
 		//////// OUTPUT CHARTS ////////
-		$('#chartContainer').append('<canvas id="topChart" width="800" height="500"></canvas>');
-		$('#chartContainer').append('<canvas id="bottomChart" width="800" height="500"></canvas>');
-		var ctx1 = document.getElementById("topChart").getContext("2d");
-		var ctx2 = document.getElementById("bottomChart").getContext("2d");
 		if ((document.getElementById("showLineGraph").checked) && (document.getElementById("showBarGraph").checked)) {
-			var lineChart = new Chart(ctx1).Line(dataLine, {responsive: true});
-			var barChart = new Chart(ctx2).Bar(dataBar, {responsive: true});
+			$('#chartContainer').append('<canvas id="topChart" width="340" height="200"></canvas>');
+			$('#chartContainer').append('<canvas id="bottomChart" width="340" height="200"></canvas>');
+			var ctx1 = document.getElementById("topChart").getContext("2d");
+			var ctx2 = document.getElementById("bottomChart").getContext("2d");
+			lineChart = new Chart(ctx1).Line(dataLine, {responsive: true});
+			barChart = new Chart(ctx2).Bar(dataBar, {responsive: true});
 		} else if (document.getElementById("showLineGraph").checked) {
-			var lineChart = new Chart(ctx1).Line(dataLine, {responsive: true});
+			$('#chartContainer').append('<canvas id="topChart" width="340" height="200"></canvas>');
+			var ctx1 = document.getElementById("topChart").getContext("2d");
+			lineChart = new Chart(ctx1).Line(dataLine, {responsive: true});
 		} else if (document.getElementById("showBarGraph").checked) {
-			var barChart = new Chart(ctx1).Bar(dataBar, {responsive: true});
+			$('#chartContainer').append('<canvas id="topChart" width="340" height="200"></canvas>');
+			var ctx1 = document.getElementById("topChart").getContext("2d");
+			barChart = new Chart(ctx1).Bar(dataBar, {responsive: true});
 		}
 
 	} else {
 		// If at least one article has not been entered, alert user:
 		alert("Please enter at least one article to analyze.");
-		$('#chartContainer').empty();
 	}
 
 	// Get rid of loading overlay:
