@@ -149,24 +149,22 @@
 			</h6>
 		</div>
 
-		<div class="nine columns">
-			<div id="keyContainer" style="align:center;">
-				<div id="keyTitle" align="center" class="three columns" style="align:center; display:none;">Key: </div>
-				<div id="keyOne" align="center" class="three columns" style="align:center; background:#5686BF; border-radius:5px; color:white;"></div>
-				<div id="keyTwo" align="center" class="three columns" style="align:center; background:#A0BF62; border-radius:5px; color:white;"></div>
-				<div id="keyThree" align="center" class="three columns" style="align:center; background:#F79B4F; border-radius:5px; color:white;"></div>
-			</div>
-			<br><br>
-			<div id="keyContainerTwo" style="align:center;">
-				<div id="spacerOne" align="center" class="three columns" style="align:center; background:#FFFFFF; border-radius:5px;">&nbsp;</div>
-				<div id="keyFour" align="center" class="three columns" style="align:center; background:#C25754; border-radius:5px; color:white;"></div>
-				<div id="keyFive" align="center" class="three columns" style="align:center; background:#8368A4; border-radius:5px; color:white;"></div>
-				<div id="spacerTwo" align="center" class="three columns" style="align:center; background:#FFFFFF; border-radius:5px;">&nbsp;</div>
-			</div>
-			<br><br>
-			<div id="chartContainer" style="align:center;"></div>
-			<div class="loader" id="loader"></div>
+		<div id="keyContainer" class="nine columns" style="align:center;">
+			<div id="keyTitle" align="center" class="three columns" style="align:center; text-align:center; display:none;">Key: </div>
+			<div id="keyOne" align="center" class="three columns" style="align:center; text-align:center; background:#5686BF; border-radius:5px; color:white;"></div>
+			<div id="keyTwo" align="center" class="three columns" style="align:center; text-align:center; background:#A0BF62; border-radius:5px; color:white;"></div>
+			<div id="keyThree" align="center" class="three columns" style="align:center; text-align:center; background:#F79B4F; border-radius:5px; color:white;"></div>
 		</div>
+		<br><br>
+		<div id="keyContainerTwo" class="nine columns" style="align:center;">
+			<div id="spacerOne" align="center" class="three columns" style="align:center; text-align:center; background:#FFFFFF; border-radius:5px;">&nbsp;</div>
+			<div id="keyFour" align="center" class="three columns" style="align:center; text-align:center; background:#C25754; border-radius:5px; color:white;"></div>
+			<div id="keyFive" align="center" class="three columns" style="align:center; text-align:center; background:#8368A4; border-radius:5px; color:white;"></div>
+			<div id="spacerTwo" align="center" class="three columns" style="align:center; text-align:center; background:#FFFFFF; border-radius:5px;">&nbsp;</div>
+		</div>
+		<br><br>
+		<div id="chartContainer" class="nine columns" classstyle="align:center;"></div>
+		<div class="loader" id="loader"></div>
 	</div>
 </div>
 
@@ -174,7 +172,8 @@
 
 <script>
 function loadStart() {
-	// Clearc charts:
+	// Clear charts:
+	$('#chartContainer').empty();
 	if (typeof lineChart !== 'undefined') {
 		lineChart.destroy();
     	}
@@ -182,7 +181,7 @@ function loadStart() {
 		barChart.destroy();
     	}
 
-	// Clear key:
+	// Clear keys:
 	document.getElementById("keyTitle").style.display="none";
 	$('#keyOne').empty();
 	$('#keyTwo').empty();
@@ -198,7 +197,6 @@ function loadStart() {
 		setTimeout(main, 0);
 	}
 }
-
 
 function main() {
 
@@ -623,18 +621,18 @@ function main() {
 
 		//////// OUTPUT CHARTS ////////
 		if ((document.getElementById("showLineGraph").checked) && (document.getElementById("showBarGraph").checked)) {
-			$('#chartContainer').append('<canvas id="topChart" width="340" height="200"></canvas>');
-			$('#chartContainer').append('<canvas id="bottomChart" width="340" height="200"></canvas>');
+			$('#chartContainer').append('<canvas id="topChart" width="800" height="500" style="vertical-align: bottom;"></canvas>');
+			$('#chartContainer').append('<canvas id="bottomChart" width="800" height="500" style="vertical-align: bottom;"></canvas>');
 			var ctx1 = document.getElementById("topChart").getContext("2d");
 			var ctx2 = document.getElementById("bottomChart").getContext("2d");
 			lineChart = new Chart(ctx1).Line(dataLine, {responsive: true});
 			barChart = new Chart(ctx2).Bar(dataBar, {responsive: true});
 		} else if (document.getElementById("showLineGraph").checked) {
-			$('#chartContainer').append('<canvas id="topChart" width="340" height="200"></canvas>');
+			$('#chartContainer').append('<canvas id="topChart" width="800" height="500" style="vertical-align: bottom;"></canvas>');
 			var ctx1 = document.getElementById("topChart").getContext("2d");
 			lineChart = new Chart(ctx1).Line(dataLine, {responsive: true});
 		} else if (document.getElementById("showBarGraph").checked) {
-			$('#chartContainer').append('<canvas id="topChart" width="340" height="200"></canvas>');
+			$('#chartContainer').append('<canvas id="topChart" width="800" height="500" style="vertical-align: bottom;"></canvas>');
 			var ctx1 = document.getElementById("topChart").getContext("2d");
 			barChart = new Chart(ctx1).Bar(dataBar, {responsive: true});
 		}
