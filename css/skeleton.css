@@ -51,8 +51,6 @@
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
-  .nine {
-    padding-left: 1cm; }
   .container {
     width: 80%; }
   .column,
