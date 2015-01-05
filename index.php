@@ -183,7 +183,7 @@ function loadStart() {
 	$('#keyFive').empty();
 	$('#chartContainer').empty();
 
-	// Check if graph type has been selects; if not, activate loading overlay and call main method:
+	// Check if graph type has been selected; if not, activate loading overlay and call main method:
 	if (!document.getElementById("showLineGraph").checked && !document.getElementById("showBarGraph").checked) {
 		alert("Please select the type(s) of graph you want!");
 		$('#DivChartContainer').empty();
