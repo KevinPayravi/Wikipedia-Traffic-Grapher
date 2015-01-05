@@ -26,6 +26,16 @@
 	<div class="row">
 		<div class="three columns">
 			<h4><b>Wikipedia Multi-Page Traffic Grapher</b></h4>
+			<h6>
+				Made with <3 by <a href="http://www.kevinpayravi.com/">Kevin Payravi</a>
+				<br>
+				(<a href="http://en.wikipedia.org/wiki/User:SuperHamster">SuperHamster</a> at en.wiki)
+				<br><br>
+				Data from <a href="http://stats.grok.se/">stats.grok.se</a>
+				<br>
+				Made using <a href="http://getskeleton.com/">Skeleton</a> and <a href="http://www.chartjs.org/">Chart.js</a>
+			</h6>
+			<br>
 			Enter up to 5 articles:<br>
 			<form id="articleForm" action="javascript:void(0);" method="get">
 				<input type="text" name="articleOne" /><br>
@@ -135,18 +145,6 @@
 			<br><br>
 			<input class="button-primary" type="submit" onclick="loadStart()" value="Submit" />
 			<br><br><br><br><br>
-			<iframe src="http://ghbtns.com/github-btn.html?user=KevinPayravi&repo=Wikipedia-Traffic-Grapher&type=watch&count=true" height="30" width="118" frameborder="0" scrolling="0" style="width:118px; height: 30px;" allowTransparency="true"></iframe>
-			<h6>
-				Made with <3 by <a href="http://www.kevinpayravi.com/">Kevin Payravi</a>
-				<br>
-				(<a href="http://en.wikipedia.org/wiki/User:SuperHamster">SuperHamster</a> at en.wiki)
-				<br><br>
-				Data from <a href="http://stats.grok.se/">stats.grok.se</a>
-				<br>
-				Made using <a href="http://getskeleton.com/">Skeleton</a> and <a href="http://www.chartjs.org/">Chart.js</a>
-				<br><br>
-				See <a href="https://github.com/KevinPayravi/Wikipedia-Traffic-Grapher">source</a> for licensing
-			</h6>
 		</div>
 
 		<div id="keyContainer" class="nine columns" style="align:center;">
