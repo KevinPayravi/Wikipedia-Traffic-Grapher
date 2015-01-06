@@ -378,7 +378,12 @@ function main() {
 			$('#keyFour').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[3] + "\">" + articles[3] + "</a>");
 			$('#keyFive').append("<a class=\"key\" href=\"http://en.wikipedia.org/wiki/" + articles[4] + "\">" + articles[4] + "</a>");
 		}
-
+		
+		//////// TRUNCATE DATES ////////
+		for (var i = 0; i < dates.length; i++) {
+			dates[i] = dates[i].substring(dates[i].length - 2, dates[i].length);
+		}
+		
 		//////// GENERATE GRAPH DATASETS ////////
 		if (articles.length == 1) {
 			var dataLine = {
