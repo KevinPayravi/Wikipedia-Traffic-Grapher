@@ -27,6 +27,8 @@
 		<div class="three columns">
 			<h4><b>Wikipedia Multi-Page Traffic Grapher</b></h4>
 			<h6>
+				<iframe src="http://ghbtns.com/github-btn.html?user=KevinPayravi&repo=Wikipedia-Traffic-Grapher&type=watch&count=true" height="30" width="118" frameborder="0" scrolling="0" style="width:118px; height: 30px;" allowTransparency="true"></iframe>
+				<br>
 				Made with <3 by <a href="http://www.kevinpayravi.com/">Kevin Payravi</a>
 				<br>
 				(<a href="http://en.wikipedia.org/wiki/User:SuperHamster">SuperHamster</a> at en.wiki)
