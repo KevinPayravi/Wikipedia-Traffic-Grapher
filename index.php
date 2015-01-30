@@ -147,23 +147,23 @@
 			<br><br><br><br><br>
 		</div>
 
-		<div id="keyContainer" class="nine columns" style="align:center;">
-			<div id="keyTitle" align="center" class="three columns" style="align:center; text-align:center; display:none;">Key: </div>
-			<div id="keyOne" align="center" class="three columns" style="align:center; text-align:center; background:#5686BF; border-radius:5px; color:white;"></div>
-			<div id="keyTwo" align="center" class="three columns" style="align:center; text-align:center; background:#A0BF62; border-radius:5px; color:white;"></div>
-			<div id="keyThree" align="center" class="three columns" style="align:center; text-align:center; background:#F79B4F; border-radius:5px; color:white;"></div>
+		<div id="keyContainer" class="nine columns" style="text-align:center;">
+			<div id="keyTitle" align="center" class="three columns" style="text-align:center; text-align:center; display:none;">Key: </div>
+			<div id="keyOne" align="center" class="three columns" style="text-align:center; text-align:center; background:#5686BF; border-radius:5px; color:white;"></div>
+			<div id="keyTwo" align="center" class="three columns" style="text-align:center; text-align:center; background:#A0BF62; border-radius:5px; color:white;"></div>
+			<div id="keyThree" align="center" class="three columns" style="text-align:center; text-align:center; background:#F79B4F; border-radius:5px; color:white;"></div>
 		</div>
 		<br><br>
-		<div id="keyContainerTwo" class="nine columns" style="align:center;">
-			<div id="spacerOne" align="center" class="three columns" style="align:center; text-align:center; background:#FFFFFF; border-radius:5px;">&nbsp;</div>
-			<div id="keyFour" align="center" class="three columns" style="align:center; text-align:center; background:#C25754; border-radius:5px; color:white;"></div>
-			<div id="keyFive" align="center" class="three columns" style="align:center; text-align:center; background:#8368A4; border-radius:5px; color:white;"></div>
-			<div id="spacerTwo" align="center" class="three columns" style="align:center; text-align:center; background:#FFFFFF; border-radius:5px;">&nbsp;</div>
+		<div id="keyContainerTwo" class="nine columns" style="text-align:center;">
+			<div id="spacerOne" align="center" class="three columns" style="text-align:center; text-align:center; background:#FFFFFF; border-radius:5px;">&nbsp;</div>
+			<div id="keyFour" align="center" class="three columns" style="text-align:center; text-align:center; background:#C25754; border-radius:5px; color:white;"></div>
+			<div id="keyFive" align="center" class="three columns" style="text-align:center; text-align:center; background:#8368A4; border-radius:5px; color:white;"></div>
+			<div id="spacerTwo" align="center" class="three columns" style="text-align:center; text-align:center; background:#FFFFFF; border-radius:5px;">&nbsp;</div>
 		</div>
 
 		<br><br>
 
-		<div id="chartContainer" class="nine columns" classstyle="align:center;"></div>
+		<div id="chartContainer" class="nine columns" style="text-align:center;"></div>
 
 		<div class="loader" id="loader"></div>
 	</div>
