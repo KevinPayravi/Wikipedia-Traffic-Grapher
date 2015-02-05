@@ -56,7 +56,8 @@
 			Select Month:
 			<br>
 			<select id="date">
-				<option selected="selected" value="201501">January '15</option>
+				<option selected="selected" value="201502">February '15</option>
+				<option value="201501">January '15</option>
 				<option value="201412">December '14</option>
 				<option value="201411">November '14</option>
 				<option value="201410">October '14</option>
