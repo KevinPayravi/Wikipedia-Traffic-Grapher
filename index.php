@@ -29,6 +29,8 @@
 		<div class="three columns">
 			<h4><b>Wikipedia Multi-Page Traffic Grapher</b></h4>
 			<h6>
+				For the English Wikipedia.
+				<br><br>
 				Made with <3 by <a href="http://www.kevinpayravi.com/">Kevin Payravi</a>
 				<br>
 				(<a href="http://en.wikipedia.org/wiki/User:SuperHamster">SuperHamster</a> at en.wiki)
