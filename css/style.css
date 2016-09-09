@@ -32,3 +32,12 @@ a.key:hover {
 a.key:active {
     color: #FFFFFF;
 }
+
+.warning {
+	background-color: #F2DEDE;
+	border: 1px solid #DC5044;
+	color: #9F6000;
+	margin: 20px;
+	padding: 15px;
+	text-align: center;
+}

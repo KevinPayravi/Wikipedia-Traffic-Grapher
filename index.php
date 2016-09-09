@@ -23,6 +23,8 @@
 <body>
 <br><br>
 <div class="container">
+	<div class="warning">This tool only works through 2015. Our data source (stats.grok.se) has been deprecated. Check out the latest pageview tool, <a href="https://tools.wmflabs.org/pageviews/">Pageviews Analysis</a>.</div>
+	<br><br>
 	<div class="row">
 		<div class="three columns">
 			<h4><b>Wikipedia Multi-Page Traffic Grapher</b></h4>
@@ -77,6 +79,9 @@
 				month[10] = "November";
 				month[11] = "December";
 				
+				// The following code generates dropdown months for the current year, up to the previous month.
+				// Currently disabled since stats.grok.se hasn't been updating since 2016-01.
+				/*
 				for(m = currentMonth - 1; m >= 0; m--) {
 					var dateSelection = document.createElement("OPTION");
 					dateSelection.text = month[m] + " " + String(currentYear);
@@ -87,8 +92,9 @@
 					}
 					document.getElementById('date').options.add(dateSelection);
 				}
+				*/
 				
-				for(y = currentYear - 1; y >= 2008; y--) {
+				for(y = 2015; y >= 2008; y--) {
 					for(m = 11; m >= 0; m--) {
 						var dateSelection = document.createElement("OPTION");
 						dateSelection.text = month[m] + " " + String(y);
