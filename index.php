@@ -56,95 +56,51 @@
 			Select Month:
 			<br>
 			<select id="date">
-				<option selected="selected" value="201505">May '15</option>
-				<option value="201504">April '15</option>
-				<option value="201503">March '15</option>
-				<option value="201502">February '15</option>
-				<option value="201501">January '15</option>
-				<option value="201412">December '14</option>
-				<option value="201411">November '14</option>
-				<option value="201410">October '14</option>
-				<option value="201409">September '14</option>
-				<option value="201408">August '14</option>
-				<option value="201407">July '14</option>
-				<option value="201406">June '14</option>
-				<option value="201405">May '14</option>
-				<option value="201404">April '14</option>
-				<option value="201403">March '14</option>
-				<option value="201402">February '14</option>
-				<option value="201401">January '14</option>
-				<option value="201312">December '13</option>
-				<option value="201311">November '13</option>
-				<option value="201310">October '13</option>
-				<option value="201309">September '13</option>
-				<option value="201308">August '13</option>
-				<option value="201307">July '13</option>
-				<option value="201306">June '13</option>
-				<option value="201305">May '13</option>
-				<option value="201304">April '13</option>
-				<option value="201303">March '13</option>
-				<option value="201302">February '13</option>
-				<option value="201301">January '13</option>
-				<option value="201212">December '12</option>
-				<option value="201211">November '12</option>
-				<option value="201210">October '12</option>
-				<option value="201209">September '12</option>
-				<option value="201208">August '12</option>
-				<option value="201207">July '12</option>
-				<option value="201206">June '12</option>
-				<option value="201205">May '12</option>
-				<option value="201204">April '12</option>
-				<option value="201203">March '12</option>
-				<option value="201202">February '12</option>
-				<option value="201201">January '12</option>
-				<option value="201112">December '11</option>
-				<option value="201111">November '11</option>
-				<option value="201110">October '11</option>
-				<option value="201109">September '11</option>
-				<option value="201108">August '11</option>
-				<option value="201107">July '11</option>
-				<option value="201106">June '11</option>
-				<option value="201105">May '11</option>
-				<option value="201104">April '11</option>
-				<option value="201103">March '11</option>
-				<option value="201102">February '11</option>
-				<option value="201101">January '11</option>
-				<option value="201012">December '10</option>
-				<option value="201011">November '10</option>
-				<option value="201010">October '10</option>
-				<option value="201009">September '10</option>
-				<option value="201008">August '10</option>
-				<option value="201007">July '10</option>
-				<option value="201006">June '10</option>
-				<option value="201005">May '10</option>
-				<option value="201004">April '10</option>
-				<option value="201003">March '10</option>
-				<option value="201002">February '10</option>
-				<option value="201001">January '10</option>
-				<option value="200912">December '09</option>
-				<option value="200911">November '09</option>
-				<option value="200910">October '09</option>
-				<option value="200909">September '09</option>
-				<option value="200908">August '09</option>
-				<option value="200907">July '09</option>
-				<option value="200906">June '09</option>
-				<option value="200905">May '09</option>
-				<option value="200904">April '09</option>
-				<option value="200903">March '09</option>
-				<option value="200902">February '09</option>
-				<option value="200901">January '09</option>
-				<option value="200812">December '08</option>
-				<option value="200811">November '08</option>
-				<option value="200810">October '08</option>
-				<option value="200809">September '08</option>
-				<option value="200808">August '08</option>
-				<option value="200807">July '08</option>
-				<option value="200806">June '08</option>
-				<option value="200805">May '08</option>
-				<option value="200804">April '08</option>
-				<option value="200803">March '08</option>
-				<option value="200802">February '08</option>
-				<option value="200801">January '08</option>
+				<script type="text/javascript">
+				var d = new Date();
+				var currentYear = d.getFullYear();
+				var currentMonth = d.getMonth();
+				var d = new Date();
+				var currentYear = d.getFullYear();
+				var currentMonth = d.getMonth();
+				var month = new Array();
+				month[0] = "January";
+				month[1] = "February";
+				month[2] = "March";
+				month[3] = "April";
+				month[4] = "May";
+				month[5] = "June";
+				month[6] = "July";
+				month[7] = "August";
+				month[8] = "September";
+				month[9] = "October";
+				month[10] = "November";
+				month[11] = "December";
+				
+				for(m = currentMonth - 1; m >= 0; m--) {
+					var dateSelection = document.createElement("OPTION");
+					dateSelection.text = month[m] + " " + String(currentYear);
+					if(m < 10) {
+						dateSelection.value = String(currentYear) + "0" + String(m + 1);
+					} else {
+						dateSelection.value = String(currentYear) + String(m + 1);
+					}
+					document.getElementById('date').options.add(dateSelection);
+				}
+				
+				for(y = currentYear - 1; y >= 2008; y--) {
+					for(m = 11; m >= 0; m--) {
+						var dateSelection = document.createElement("OPTION");
+						dateSelection.text = month[m] + " " + String(y);
+						if(m < 9) {
+							dateSelection.value = String(y) + "0" + String(m + 1);
+						} else {
+							dateSelection.value = String(y) + String(m + 1);
+						}
+						document.getElementById('date').options.add(dateSelection);
+					}
+				}
+				</script>
 			</select>
 			<br><br>
 			<input class="button-primary" type="submit" onclick="loadStart()" value="Submit" />
