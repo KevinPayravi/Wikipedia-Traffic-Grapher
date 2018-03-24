@@ -137,7 +137,7 @@
 	</div>
 </div>
 
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 <script>
 function loadStart() {
